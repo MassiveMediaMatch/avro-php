@@ -1468,6 +1468,9 @@ class AvroField extends AvroSchema
     if ($this->order)
       $avro[AvroField::ORDER_ATTR] = $this->order;
 
+    if ($this->doc)
+      $avro[AvroSchema::DOC_ATTR] = $this->doc;
+
     return $avro;
   }
 
